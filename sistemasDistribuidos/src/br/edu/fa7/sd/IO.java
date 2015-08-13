@@ -87,9 +87,10 @@ public class IO {
 		}
 		
 		in.close();
+	
 	}
 	
-public static void escreverArquivoComPrintStream() throws FileNotFoundException{
+public static void lerArquivoComPrintStream() throws FileNotFoundException{
 		
 	FileOutputStream file = new FileOutputStream("Exemplo2.txt");
 	
@@ -102,25 +103,10 @@ public static void escreverArquivoComPrintStream() throws FileNotFoundException{
 	printStream.close();
 	
 }
-
-public static void lerArquivoComScanner() throws FileNotFoundException{
-	
-	Scanner in = new Scanner(new FileInputStream("Exemplo2.txt"));
-	
-	StringBuilder sb = new StringBuilder();
-	while (in.hasNext()) {
-		sb.append(in.next()).append(" ");
-	}
-	
-	in.close();
-	
-	System.out.println(sb.toString());
-
-}
 	
 	
 	
 public static void main(String[] args) throws IOException {
-	 IO.lerArquivoComScanner();
+	 IO.lerArquivoComPrintStream();
 }
 }
