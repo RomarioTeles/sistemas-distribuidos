@@ -11,17 +11,17 @@ public class Cliente extends Pessoa{
 	 */
 	private static final long serialVersionUID = -741798168666949944L;
 
-	private Set<Filme> filmes;
+	private Set<Aluguel> alugueis;
 	
 	private BigDecimal debito;
 	
 	private BigDecimal credito;
 	
 	
-	public Cliente(Integer id, String nome, Set<Filme> filmes,
+	public Cliente(Integer id, String nome, Set<Aluguel> aluguel,
 			BigDecimal debito, BigDecimal credito) {
 		super(id, nome);
-		this.filmes = filmes;
+		this.alugueis = aluguel;
 		this.debito = debito;
 		this.credito = credito;
 	}
@@ -30,15 +30,19 @@ public class Cliente extends Pessoa{
 		super(id, nome);
 	}
 
-	public Set<Filme> getFilmes() {
-		if(filmes == null){
-			filmes = new HashSet<Filme>();
-		}
-		return filmes;
+	public Cliente() {
+		super();
 	}
 
-	public void setFilmes(Set<Filme> filmes) {
-		this.filmes = filmes;
+	public Set<Aluguel> getAlugueis() {
+		if(alugueis == null){
+			alugueis = new HashSet<Aluguel>();
+		}
+		return alugueis;
+	}
+
+	public void setAlugueis(Set<Aluguel> alugueis) {
+		this.alugueis = alugueis;
 	}
 
 	public BigDecimal getDebito() {
@@ -65,10 +69,12 @@ public class Cliente extends Pessoa{
 
 	@Override
 	public String toString() {
-		return "Cliente [filmes=" + filmes + ", debito=" + debito
+		return "Cliente [alugueis=" + alugueis + ", debito=" + debito
 				+ ", credito=" + credito + ", getId()=" + getId()
 				+ ", getNome()=" + getNome() + "]";
 	}
-	
 
+	
+	
+	
 }

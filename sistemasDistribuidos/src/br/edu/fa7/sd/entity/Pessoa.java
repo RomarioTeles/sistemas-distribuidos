@@ -19,6 +19,10 @@ public class Pessoa implements Serializable {
 		Nome = nome;
 	}
 
+	public Pessoa() {
+		super();
+	}
+
 	public Integer getId() {
 		return id;
 	}

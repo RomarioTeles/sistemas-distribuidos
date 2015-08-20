@@ -14,6 +14,10 @@ public class Funcionario extends Pessoa{
 		this.lotacao = lotacao;
 	}
 
+	public Funcionario() {
+		super();
+	}
+
 	public String getLotacao() {
 		return lotacao;
 	}
