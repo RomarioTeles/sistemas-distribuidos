@@ -1,4 +1,4 @@
-package br.edu.fa7.sd;
+package br.edu.fa7.sd.util;
 
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
