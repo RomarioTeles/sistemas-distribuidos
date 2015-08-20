@@ -1,0 +1,1 @@
+Cliente [alugueis=[Aluguel [funcionario=Funcionario [lotacao=Caixa, getId()=1, getNome()=Romário Teles], data=Thu Aug 20 20:44:44 BRT 2015, filme=1]], debito=15, credito=0, getId()=1, getNome()=André Bessa]

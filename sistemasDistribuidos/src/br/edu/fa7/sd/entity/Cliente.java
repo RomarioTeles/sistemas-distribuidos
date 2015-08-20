@@ -1,6 +1,5 @@
 package br.edu.fa7.sd.entity;
 
-import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -13,13 +12,13 @@ public class Cliente extends Pessoa{
 
 	private Set<Aluguel> alugueis;
 	
-	private BigDecimal debito;
+	private Integer debito;
 	
-	private BigDecimal credito;
+	private Integer credito;
 	
 	
 	public Cliente(Integer id, String nome, Set<Aluguel> aluguel,
-			BigDecimal debito, BigDecimal credito) {
+			Integer debito, Integer credito) {
 		super(id, nome);
 		this.alugueis = aluguel;
 		this.debito = debito;
@@ -45,25 +44,25 @@ public class Cliente extends Pessoa{
 		this.alugueis = alugueis;
 	}
 
-	public BigDecimal getDebito() {
+	public Integer getDebito() {
 		if(debito == null){
-			debito = BigDecimal.ZERO;
+			debito = 0;
 		}
 		return debito;
 	}
 
-	public void setDebito(BigDecimal debito) {
+	public void setDebito(Integer debito) {
 		this.debito = debito;
 	}
 
-	public BigDecimal getCredito() {
+	public Integer getCredito() {
 		if(credito == null){
-			credito = BigDecimal.ZERO;
+			credito = 0;
 		}
 		return credito;
 	}
 
-	public void setCredito(BigDecimal credito) {
+	public void setCredito(Integer credito) {
 		this.credito = credito;
 	}
 

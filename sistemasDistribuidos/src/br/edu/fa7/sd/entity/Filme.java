@@ -20,6 +20,21 @@ public class Filme implements Serializable {
 	private Boolean dublado;
 	
 	private String classificacao;
+	
+	public Filme(){
+		super();
+	}
+	
+	public Filme(Integer id, String nome, String genero, Boolean legendado,
+			Boolean dublado, String classificacao) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.genero = genero;
+		this.legendado = legendado;
+		this.dublado = dublado;
+		this.classificacao = classificacao;
+	}
 
 	public Integer getId() {
 		return id;

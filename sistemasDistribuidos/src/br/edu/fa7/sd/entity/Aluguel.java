@@ -9,6 +9,17 @@ public class Aluguel {
 	private Date data;
 	
 	private Filme filme;
+	
+	public Aluguel(){
+		super();
+	}
+
+	public Aluguel(Funcionario funcionario, Date data, Filme filme) {
+		super();
+		this.funcionario = funcionario;
+		this.data = data;
+		this.filme = filme;
+	}
 
 	public Funcionario getFuncionario() {
 		if(funcionario == null){

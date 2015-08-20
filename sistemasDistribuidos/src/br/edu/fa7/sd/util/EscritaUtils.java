@@ -8,13 +8,13 @@ import java.io.OutputStreamWriter;
 import java.io.PrintStream;
 
 public class EscritaUtils {
-	public static void escreverArquivoComOutpuStream(FileOutputStream file) throws IOException {
+	public static void escreverArquivoComOutpuStream(FileOutputStream file, String conteudo) throws IOException {
 
 		OutputStreamWriter outputStreamWriter = new OutputStreamWriter(file);
 
 		BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
 
-		bufferedWriter.write(LeituraUtils.lerTecladoComInputStream());
+		bufferedWriter.write(conteudo);
 
 		bufferedWriter.newLine();
 
