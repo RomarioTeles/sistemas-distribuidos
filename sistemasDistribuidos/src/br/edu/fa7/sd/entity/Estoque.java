@@ -55,7 +55,7 @@ public class Estoque implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Estoque [id=" + id + ", filme=" + filme.getId() + ", quantidade="
+		return "Estoque [id=" + id + ", filme=" + filme + ", quantidade="
 				+ quantidade + "]";
 	}
 

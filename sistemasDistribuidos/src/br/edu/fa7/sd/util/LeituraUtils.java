@@ -2,6 +2,7 @@ package br.edu.fa7.sd.util;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -27,12 +28,11 @@ public class LeituraUtils {
 
 	}
 
-	public static String lerArquivoComInputStream() throws IOException {
+	public static String lerArquivoComInputStream(FileInputStream file) throws IOException {
 
-		FileInputStream inputStream = new FileInputStream("Exemplo.txt");
 
 		BufferedReader bufferedReader = new BufferedReader(
-				new InputStreamReader(inputStream));
+				new InputStreamReader(file));
 
 		String line = "";
 

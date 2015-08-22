@@ -69,8 +69,8 @@ public class Cliente extends Pessoa{
 	@Override
 	public String toString() {
 		return "Cliente [alugueis=" + alugueis + ", debito=" + debito
-				+ ", credito=" + credito + ", getId()=" + getId()
-				+ ", getNome()=" + getNome() + "]";
+				+ ", credito=" + credito + ", id=" + getId()
+				+ ", nome=" + getNome() + "]";
 	}
 
 	

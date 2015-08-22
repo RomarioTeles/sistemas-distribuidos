@@ -54,7 +54,7 @@ public class Aluguel {
 	@Override
 	public String toString() {
 		return "Aluguel [funcionario=" + funcionario + ", data=" + data
-				+ ", filme=" + filme.getId() + "]";
+				+ ", filme=" + filme + "]";
 	}
 	
 	

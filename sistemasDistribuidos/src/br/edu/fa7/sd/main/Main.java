@@ -19,7 +19,7 @@ public class Main {
 	
 		Filme filme = new Filme(1, "Fa7 80 Anos", "outros", false, false, "livre");
 		
-		Funcionario funcionario = new Funcionario(1, "Romário Teles", "Caixa");
+		Funcionario funcionario = new Funcionario(1, "Romario Teles", "Caixa");
 		
 		Aluguel aluguel = new Aluguel(funcionario, new Date(), filme);
 		
@@ -27,7 +27,7 @@ public class Main {
 		
 		aluguels.add(aluguel);
 		
-		Cliente cliente = new Cliente(1, "André Bessa", aluguels,15, 0);
+		Cliente cliente = new Cliente(1, "Andre Bessa", aluguels,15, 0);
 		
 		FileOutputStream file = new FileOutputStream("cliente.txt", true);
 		
