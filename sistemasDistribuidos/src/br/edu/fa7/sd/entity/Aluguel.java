@@ -10,15 +10,20 @@ public class Aluguel {
 	
 	private Filme filme;
 	
+	private Double valor;
+	
+	private Cliente cliente;
+	
 	public Aluguel(){
 		super();
 	}
 
-	public Aluguel(Funcionario funcionario, Date data, Filme filme) {
+	public Aluguel(Funcionario funcionario, Cliente cliente, Date data, Filme filme) {
 		super();
 		this.funcionario = funcionario;
 		this.data = data;
 		this.filme = filme;
+		this.cliente = cliente;
 	}
 
 	public Funcionario getFuncionario() {
@@ -49,6 +54,25 @@ public class Aluguel {
 
 	public void setFilme(Filme filme) {
 		this.filme = filme;
+	}
+
+	public Double getValor() {
+		return valor;
+	}
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+	public Cliente getCliente() {
+		if(cliente == null){
+			cliente = new Cliente();
+		}
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
 	}
 
 	@Override

@@ -33,6 +33,10 @@ public class Cliente extends Pessoa{
 		super();
 	}
 
+	public Cliente(int id, String nome, int debito, int credito) {
+		super(id, nome);
+	}
+
 	public Set<Aluguel> getAlugueis() {
 		if(alugueis == null){
 			alugueis = new HashSet<Aluguel>();
@@ -68,10 +72,10 @@ public class Cliente extends Pessoa{
 
 	@Override
 	public String toString() {
-		return "Cliente [alugueis=" + alugueis + ", debito=" + debito
-				+ ", credito=" + credito + ", id=" + getId()
-				+ ", nome=" + getNome() + "]";
+		return "Cliente [id="+getId() +", nome=" +getNome() + ", alugueis=" + alugueis + ", debito=" + debito + ", credito=" + credito + "]";
 	}
+
+	
 
 	
 	

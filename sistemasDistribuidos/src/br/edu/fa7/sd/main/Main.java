@@ -21,13 +21,15 @@ public class Main {
 		
 		Funcionario funcionario = new Funcionario(1, "Romario Teles", "Caixa");
 		
-		Aluguel aluguel = new Aluguel(funcionario, new Date(), filme);
+		Cliente cliente = new Cliente(1, "Andre Bessa",15, 0);
+		
+		Aluguel aluguel = new Aluguel(funcionario, cliente, new Date(), filme);
 		
 		Set<Aluguel> aluguels = new HashSet<Aluguel>();
 		
 		aluguels.add(aluguel);
 		
-		Cliente cliente = new Cliente(1, "Andre Bessa", aluguels,15, 0);
+		cliente.setAlugueis(aluguels);
 		
 		FileOutputStream file = new FileOutputStream("cliente.txt", true);
 		

@@ -1,2 +1,1 @@
-Cliente [alugueis=[Aluguel [funcionario=Funcionario [lotacao=Caixa, getId()=1, getNome()=Romário Teles], data=Thu Aug 20 20:44:44 BRT 2015, filme=1]], debito=15, credito=0, getId()=1, getNome()=André Bessa]
-Cliente [alugueis=[Aluguel [funcionario=Funcionario [lotacao=Caixa, getId()=1, getNome()=Romario Teles], data=Fri Aug 21 21:53:55 BRT 2015, filme=1]], debito=15, credito=0, getId()=1, getNome()=Andre Bessa]
+Cliente [id=1, nome=Andre Bessa, alugueis=[Aluguel [funcionario=Funcionario [lotacao=Caixa, ID=1, nome=Romario Teles], data=Sun Aug 23 18:22:13 BRT 2015, filme=Filme [id=1, nome=Fa7 80 Anos, genero=outros, legendado=false, dublado=false, classificacao=livre]]], debito=null, credito=null]
