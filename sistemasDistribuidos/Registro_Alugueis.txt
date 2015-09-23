@@ -1,0 +1,3 @@
+Aluguel [ id= 1 funcionario=Funcionario [ id=1, lotacao=Caixa, nome=Romario], data=Wed Sep 23 11:46:48 BRT 2015, filme=null, cliente=Cliente [id= 2, nome= Maria Chilindrina, debito= 0, credito= 0]]
+Aluguel [ id= 2 funcionario=Funcionario [ id=1, lotacao=Caixa, nome=Romario], data=Wed Sep 23 11:48:55 BRT 2015, filme=Filme [id=1, nome=A hora do rush, genero=Ação, legendado=true, dublado=true, classificacao=14], cliente=Cliente [id= 2, nome= Maria Chilindrina, debito= 0, credito= 0]]
+Aluguel [ id= 3 funcionario=Funcionario [ id=2, lotacao=Caixa, nome=Joao], data=Wed Sep 23 11:48:55 BRT 2015, filme=null, cliente=Cliente [id= 1, nome= André Bessa, debito= 0, credito= 0]]

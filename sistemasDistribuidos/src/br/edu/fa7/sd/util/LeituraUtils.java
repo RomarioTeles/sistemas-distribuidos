@@ -1,84 +1,54 @@
 package br.edu.fa7.sd.util;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.Scanner;
+
+import org.apache.commons.io.IOUtils;
 
 public class LeituraUtils {
 
-	public static String lerTecladoComInputStream() throws IOException {
+	InputStream inputStream = System.in;
+	InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+	BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
 
-		System.out.println("Digite aqui: ");
+	public LeituraUtils() throws IOException {
 
-		InputStream in = System.in;
+		// Ler cadeia de bytes de um teclado
+		inputStream = System.in;
 
-		InputStreamReader is = new InputStreamReader(in);
+		// Converte para Char
+		inputStreamReader = new InputStreamReader(inputStream);
 
-		BufferedReader br = new BufferedReader(is);
+		// Concatena o conjunto de Char em uma String
+		bufferedReader = new BufferedReader(inputStreamReader);
 
-		String line = br.readLine();
+	}
 
-		br.close();
+	public String lerLinha() throws IOException {
 
+		// Lê uma linha
+		String line = bufferedReader.readLine();
+		//close();
 		return line;
-
 	}
+	
+		public void close() throws IOException {
 
-	public static String lerArquivoComInputStream(FileInputStream file) throws IOException {
-
-
-		BufferedReader bufferedReader = new BufferedReader(
-				new InputStreamReader(file));
-
-		String line = "";
-
-		StringBuilder sb = new StringBuilder();
-
-		while ((line = bufferedReader.readLine()) != null) {
-			sb.append(line).append("\n");
-		}
-
+		// Close
 		bufferedReader.close();
-		return sb.toString();
 	}
-
-	public static void lerTecladoComScanner() {
-
-		Scanner in = new Scanner(System.in);
-
-		System.out.print("Digite aqui: ");
-
-		StringBuilder sb = new StringBuilder();
-
-		while (in.hasNext()) {
-			sb.append(in.next()).append(" ");
+		
+	public int contalinhas(String nomeArquivo){	
+		try {
+			File file = new File(nomeArquivo);
+			FileInputStream input = new FileInputStream(file);
+			return IOUtils.readLines(input).size();
+		} catch (IOException e) {
+			return 0;
 		}
-
-		in.close();
-
-		System.out.println(sb.toString());
-
-		in.close();
-
 	}
-
-	public static void lerArquivoComScanner(FileInputStream file) {
-
-		Scanner in = new Scanner(file);
-
-		StringBuilder sb = new StringBuilder();
-
-		while (in.hasNext()) {
-			sb.append(in.next()).append(" ");
-		}
-
-		in.close();
-
-		System.out.println(sb.toString());
-
-	}
-
 }

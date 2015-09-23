@@ -3,6 +3,8 @@ package br.edu.fa7.sd.entity;
 import java.util.Date;
 
 public class Aluguel {
+	
+	private Integer id;
 
 	private Funcionario funcionario;
 	
@@ -38,6 +40,9 @@ public class Aluguel {
 	}
 
 	public Date getData() {
+		if(data == null){
+			data = new Date();
+		}
 		return data;
 	}
 
@@ -75,10 +80,18 @@ public class Aluguel {
 		this.cliente = cliente;
 	}
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
 	@Override
 	public String toString() {
-		return "Aluguel [funcionario=" + funcionario + ", data=" + data
-				+ ", filme=" + filme + "]";
+		return "Aluguel [ id= "+ id + " funcionario=" + funcionario + ", data=" + getData()
+				+ ", filme=" + filme + ", cliente=" + cliente + "]";
 	}
 	
 	

@@ -1,42 +1,45 @@
 package br.edu.fa7.sd.util;
 
 import java.io.BufferedWriter;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.io.PrintStream;
 
 public class EscritaUtils {
-	public static void escreverArquivoComOutpuStream(FileOutputStream file, String conteudo) throws IOException {
-
-		OutputStreamWriter outputStreamWriter = new OutputStreamWriter(file);
-
-		BufferedWriter bufferedWriter = new BufferedWriter(outputStreamWriter);
-
-		bufferedWriter.write(conteudo);
-
-		bufferedWriter.newLine();
-
-		bufferedWriter.flush();
-
-		bufferedWriter.close();
-
-		System.out.println("Feito!");
-
-	}
 	
-	public static void escreverArquivoComPrintStream() throws FileNotFoundException{
+	OutputStream outputStream; 
+	
+	OutputStreamWriter outputStreamWriter;
+	
+	BufferedWriter bufferedWriter;
+	
+	public EscritaUtils(String nomeAquivo) throws IOException {
 		
-		FileOutputStream file = new FileOutputStream("Exemplo2.txt");
+		//Abri arquivo para escrever cadeia de bytes
+		outputStream = new FileOutputStream(nomeAquivo,true);
+
+		//Converte de Char para Byte
+		outputStreamWriter = new OutputStreamWriter(outputStream);
+
+		//Receber String e converte em cadeia de Char
+		bufferedWriter = new BufferedWriter(outputStreamWriter);
+			
+	}
+
+	public void escreverLinha(String linha) throws IOException{
 		
-		PrintStream printStream = new PrintStream(file);
+		//Escreve uma linha no arquivo e move o cursor do arquivo uma linha para baixo
+		bufferedWriter.write(linha);
 		
-		String conteudo = "Sistemas Distribuidos";
+		bufferedWriter.newLine();
 		
-		printStream.println(conteudo);
+	}
+
+	public void close() throws IOException{
 		
-		printStream.close();
-		
+		//Força enviar cadeia de Char para arquivo físico e fecha arquivo
+		bufferedWriter.flush();
+		bufferedWriter.close();
 	}
 }

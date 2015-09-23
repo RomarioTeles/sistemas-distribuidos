@@ -28,9 +28,10 @@ public class Funcionario extends Pessoa{
 
 	@Override
 	public String toString() {
-		return "Funcionario [lotacao=" + lotacao + ", ID=" + getId()
+		return "Funcionario [ id=" + getId() +", lotacao=" + lotacao
 				+ ", nome=" + getNome() + "]";
 	}
+
 
 	
 	
