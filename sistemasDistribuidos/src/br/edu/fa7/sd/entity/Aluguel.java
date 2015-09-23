@@ -12,8 +12,6 @@ public class Aluguel {
 	
 	private Filme filme;
 	
-	private Double valor;
-	
 	private Cliente cliente;
 	
 	public Aluguel(){
@@ -59,14 +57,6 @@ public class Aluguel {
 
 	public void setFilme(Filme filme) {
 		this.filme = filme;
-	}
-
-	public Double getValor() {
-		return valor;
-	}
-
-	public void setValor(Double valor) {
-		this.valor = valor;
 	}
 
 	public Cliente getCliente() {
