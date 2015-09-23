@@ -1,7 +1,6 @@
 package br.edu.fa7.sd.main;
 
 
-import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -12,6 +11,9 @@ import br.edu.fa7.sd.entity.Aluguel;
 import br.edu.fa7.sd.entity.Cliente;
 import br.edu.fa7.sd.entity.Filme;
 import br.edu.fa7.sd.entity.Funcionario;
+import br.edu.fa7.sd.socket.cliente.ClienteCompleto;
+import br.edu.fa7.sd.socket.servidor.Servidor;
+import br.edu.fa7.sd.socket.servidor.ServidorThread;
 import br.edu.fa7.sd.util.EscritaUtils;
 import br.edu.fa7.sd.util.LeituraUtils;
 
@@ -20,6 +22,12 @@ public class Main {
 	
 	public static void main(String[] args) throws IOException {
 		
+		ClienteCompleto cc = new ClienteCompleto();
+		
+		//ServidorThread s = new ServidorThread();
+		
+		
+		/*
 		String nomeArquivo = "Registro_Alugueis.txt";
 		
 		Aluguel aluguel = new Aluguel();
@@ -137,7 +145,7 @@ public class Main {
 		}while("S".equalsIgnoreCase(opcaoConfirmacao));	
 		
 		System.out.println("Feito!");
+	}*/
+	
 	}
-	
-	
 }

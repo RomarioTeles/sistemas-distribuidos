@@ -35,6 +35,8 @@ public class EscritaUtils {
 		
 		bufferedWriter.newLine();
 		
+		close();
+		
 	}
 
 	public void close() throws IOException{

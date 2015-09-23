@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import java.util.Scanner;
 
 public class ClienteCompleto {
 
@@ -17,16 +16,11 @@ public class ClienteCompleto {
 		
 		new Thread(tratarConexoClienteCompleto).start();
 		
-		System.out.println("Digite algo: ");
-		Scanner teclado = new Scanner(System.in);
-		PrintStream saida = new PrintStream(servidor.getOutputStream());
-		
-		while(teclado.hasNextLine()){
-			saida.println(teclado.nextLine());
-		}
+		String linha = Cadastro.start();
+		PrintStream saida = new PrintStream(servidor.getOutputStream());	
+		saida.println(linha);		
 		
 		saida.close();
-		teclado.close();
 		servidor.close();
 		
 	}

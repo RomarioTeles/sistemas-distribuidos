@@ -5,6 +5,8 @@ import java.io.PrintStream;
 import java.net.Socket;
 import java.util.Scanner;
 
+import br.edu.fa7.sd.util.EscritaUtils;
+
 public class TratarConexaoServidorCompleto implements Runnable {
 
 
@@ -24,13 +26,16 @@ public class TratarConexaoServidorCompleto implements Runnable {
 		try {
 			s = new Scanner(cliente.getInputStream());	
 			
+			StringBuilder sb = new StringBuilder();
 			while(s.hasNextLine()){
-				System.out.println(s.nextLine());
-				clientePrintStream.println("Mensagem Recebida");
-			}
-			
+				sb.append(s.nextLine());
+			}		
+			EscritaUtils es = new EscritaUtils("Registro_Alugueis.txt");
+			es.escreverLinha(sb.toString());
 			s.close();
 			cliente.close();
+			
+			System.out.println("Feito!");
 			
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -14,7 +14,7 @@ public class Servidor {
 		
 		//Espera um cliente se conectar e imprime o seu IP
 		Socket cliente = serverSocket.accept();
-		System.out.println("Nova conex�o com o cliente: " + cliente.getInetAddress().getHostAddress());
+		System.out.println("Nova conexão com o cliente: " + cliente.getInetAddress().getHostAddress());
 		
 		Scanner s = new Scanner(cliente.getInputStream());
 		

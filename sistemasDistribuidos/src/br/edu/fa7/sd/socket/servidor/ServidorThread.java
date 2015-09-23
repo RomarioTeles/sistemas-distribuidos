@@ -13,9 +13,9 @@ public class ServidorThread {
 		while (true) {
 
 			Socket cliente = serverSocket.accept();
-			System.out.println("Nova conex�o com o cliente: " + cliente.getInetAddress().getHostAddress());
+			System.out.println("Nova conexão com o cliente: " + cliente.getInetAddress().getHostAddress());
 
-			  // cria um objeto que vai tratar a conex�o
+			  // cria um objeto que vai tratar a conexão
 			  TratarConexaoServidorCompleto tratamento = new TratarConexaoServidorCompleto(cliente);
 
 			  // cria a thread em cima deste objeto
