@@ -22,6 +22,6 @@ public class ClienteCompleto {
 		
 		saida.close();
 		servidor.close();
-		
+		System.out.println("Enviado!");
 	}
 }
