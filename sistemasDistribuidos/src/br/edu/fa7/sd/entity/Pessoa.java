@@ -9,11 +9,11 @@ public class Pessoa implements Serializable {
 	 */
 	private static final long serialVersionUID = -5868464915113309104L;
 
-	private Integer id;
+	private String id;
 	
 	private String Nome;
 
-	public Pessoa(Integer id, String nome) {
+	public Pessoa(String id, String nome) {
 		super();
 		this.id = id;
 		Nome = nome;
@@ -23,12 +23,12 @@ public class Pessoa implements Serializable {
 		super();
 	}
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setId(String codigo) {
+		this.id = codigo;
 	}
 
 	public String getNome() {

@@ -29,11 +29,25 @@ public class TratarConexaoServidorCompleto implements Runnable {
 			StringBuilder sb = new StringBuilder();
 			while(s.hasNextLine()){
 				sb.append(s.nextLine());
+			}
+			
+			String[] arr = sb.toString().split("#");
+			
+			if(arr[0].equals("cliente")){
+				EscritaUtils es = new EscritaUtils("Registro_clientes.txt");
+				es.escreverLinha(arr[1]);
+				s.close();
+			}else if(arr[0].equals("funcionario")){
+				EscritaUtils es = new EscritaUtils("Registro_funcionarios.txt");
+				es.escreverLinha(arr[1]);
+				s.close();
+			}else if(arr[0].equals("filme")){
+				EscritaUtils es = new EscritaUtils("Registro_filmes.txt");
+				es.escreverLinha(arr[1]);
+				s.close();
+			}else{
+				System.out.println("Nada feito!");
 			}		
-			EscritaUtils es = new EscritaUtils("Registro_Alugueis.txt");
-			es.escreverLinha(sb.toString());
-			s.close();
-			cliente.close();
 			
 			System.out.println("Feito!");
 			

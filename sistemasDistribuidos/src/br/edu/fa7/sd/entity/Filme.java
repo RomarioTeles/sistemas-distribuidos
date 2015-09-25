@@ -9,39 +9,26 @@ public class Filme implements Serializable {
 	 */
 	private static final long serialVersionUID = 3281118217436992891L;
 
-	private Integer id;
+	private String id;
 	
 	private String nome;
-	
-	private String genero;
-	
-	private Boolean legendado;
-	
-	private Boolean dublado;
-	
-	private String classificacao;
 	
 	public Filme(){
 		super();
 	}
 	
-	public Filme(Integer id, String nome, String genero, Boolean legendado,
-			Boolean dublado, String classificacao) {
+	public Filme(String id, String nome) {
 		super();
 		this.id = id;
 		this.nome = nome;
-		this.genero = genero;
-		this.legendado = legendado;
-		this.dublado = dublado;
-		this.classificacao = classificacao;
 	}
 
-	public Integer getId() {
+	public String getId() {
 		return id;
 	}
 
-	public void setId(Integer id) {
-		this.id = id;
+	public void setId(String codigo) {
+		this.id = codigo;
 	}
 
 	public String getNome() {
@@ -52,46 +39,8 @@ public class Filme implements Serializable {
 		this.nome = nome;
 	}
 
-	public String getGenero() {
-		return genero;
-	}
-
-	public void setGenero(String genero) {
-		this.genero = genero;
-	}
-
-	public Boolean getLegendado() {
-		return legendado;
-	}
-
-	public void setLegendado(Boolean legendado) {
-		this.legendado = legendado;
-	}
-
-	public Boolean getDublado() {
-		return dublado;
-	}
-
-	public void setDublado(Boolean dublado) {
-		this.dublado = dublado;
-	}
-
-	public String getClassificacao() {
-		return classificacao;
-	}
-
-	public void setClassificacao(String classificacao) {
-		this.classificacao = classificacao;
-	}
-
 	@Override
 	public String toString() {
-		return "Filme [id=" + id + ", nome=" + nome + ", genero=" + genero
-				+ ", legendado=" + legendado + ", dublado=" + dublado
-				+ ", classificacao=" + classificacao + "]";
+		return "filme#Filme [id=" + id + ", nome=" + nome + "]";
 	}
-	
-	
-	
-	
 }

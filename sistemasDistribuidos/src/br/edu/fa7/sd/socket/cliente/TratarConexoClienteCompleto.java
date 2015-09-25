@@ -13,8 +13,6 @@ public class TratarConexoClienteCompleto implements Runnable {
 		this.servidor = servidor;
 	}
 
-
-
 	@Override
 	public void run() {
 		try{
